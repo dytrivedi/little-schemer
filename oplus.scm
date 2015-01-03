@@ -1,3 +1,5 @@
+(load "add1.scm")
+(load "sub1.scm")
 (define o+
   (lambda (n m)
     (cond

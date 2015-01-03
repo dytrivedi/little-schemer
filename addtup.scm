@@ -1,3 +1,4 @@
+(load "oplus.scm")
 (define addtup
   (lambda (tup)
     (cond

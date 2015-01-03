@@ -1,3 +1,4 @@
+(load "atom.scm")
 (define lat?
   (lambda (l)
     (cond

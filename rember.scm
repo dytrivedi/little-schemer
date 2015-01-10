@@ -1,7 +1,8 @@
+(load "equal.scm")
 (define rember
-  (lambda (a lat)
+  (lambda (s l)
     (cond
-      ((null? lat) '())
-      ((eq? (car lat) a) (cdr lat))
-      (else (cons (car lat)
-                  (rember a (cdr lat)))))))
+      ((null? l) '())
+      ((equal? (car l) s) (cdr l))
+      (else (cons (car l)
+                  (rember s (cdr l)))))))

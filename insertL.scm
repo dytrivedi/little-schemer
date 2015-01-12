@@ -1,11 +1,5 @@
-(define insertR
-  (lambda (new old lat)
-    (cond
-      ((null? lat) '())
-      (else
-        (cond
-          ((eq? (car lat) old)
-           (cons new (cdr lat)))
-          (else (cons (car lat)
-                  (insertR new old
-                    (cdr lat)))))))))
+(load "insertg.scm")
+(define insertL
+  (insert-g
+    (lambda (new old l)
+      (cons new (cons old l)))))

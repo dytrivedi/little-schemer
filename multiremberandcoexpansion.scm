@@ -27,7 +27,7 @@
              (lambda (newlat seen)
                (lambda (newlat seen)
                  (last-friend (cons 'strawberries newlat) seen)
-                 ) newlat (cons 'tuna seen))
+               ) newlat (cons 'tuna seen))
          )
 
 (multirember&co 'tuna '(swordfish)
@@ -37,6 +37,17 @@
                    (last-friend (cons 'strawberries newlat) seen)
                  ) newlat (cons 'tuna seen)
                ) (cons 'and newlat) seen)
+         )
+
+(multirember&co 'tuna '()
+             (lambda (newlat seen)
+               (lambda (newlat seen)
+                 (lambda (newlat seen)
+                   (lambda (newlat seen)
+                     (last-friend (cons 'strawberries newlat) seen)
+                   ) newlat (cons 'tuna seen)
+                 ) (cons 'and newlat) seen
+               ) (cons 'swordfish newlat) seen)
          )
 
 ((lambda (newlat seen)
